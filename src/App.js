@@ -10,7 +10,7 @@ import Chat from "./pages/Chat";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { auth } from "./services/firebase";
-//import "./styles.css";
+import "./styles.css";
 
 function PrivateRoute({ component: Component, authenticated, ...rest }) {
   return (
