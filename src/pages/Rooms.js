@@ -1,0 +1,38 @@
+import React, { Component } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
+import Chat from "./Chat";
+import Anime from "./Anime";
+import Movies from "./Movies";
+
+export default class HomePage extends Component {
+  render() {
+    return (
+      <div className="home">
+        <Header></Header>
+        <section>
+          <div className="jumbotron jumbotron-fluid py-5">
+            <div className="container text-center py-5">
+              <h1 className="display-4">Welcome to Chatty</h1>
+              <p className="lead">
+                A great place to share your thoughts with friends
+              </p>
+              <div className="mt-4"></div>
+            </div>
+          </div>
+          <button className="btn btn-primary px-5" type="submit">
+            <Anime />
+          </button>
+          <button className="btn btn-primary px-5" type="submit">
+            <Chat />
+          </button>
+          <button className="btn btn-primary px-5" type="submit">
+            <Movies />
+          </button>
+        </section>
+        <Footer></Footer>
+      </div>
+    );
+  }
+}

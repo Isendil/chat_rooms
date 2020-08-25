@@ -10,6 +10,7 @@ import Chat from "./pages/Chat";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { auth } from "./services/firebase";
+import Rooms from "./pages/Rooms";
 import "./styles.css";
 
 function PrivateRoute({ component: Component, authenticated, ...rest }) {
@@ -37,7 +38,7 @@ function PublicRoute({ component: Component, authenticated, ...rest }) {
         authenticated === false ? (
           <Component {...props} />
         ) : (
-          <Redirect to="/chat" />
+          <Redirect to="/rooms" />
         )
       }
     />
@@ -79,9 +80,9 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <PrivateRoute
-            path="/chat"
+            path="/rooms"
             authenticated={this.state.authenticated}
-            component={Chat}
+            component={Rooms}
           />
           <PublicRoute
             path="/signup"
