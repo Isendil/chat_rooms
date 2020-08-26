@@ -21,15 +21,30 @@ export default class HomePage extends Component {
               <div className="mt-4"></div>
             </div>
           </div>
-          <button className="btn btn-primary px-5" type="submit">
+          <div className="btn btn-primary px-5 rcorners">
+            <Link to="/anime">
+              <button className="btn btn-primary px-5" type="submit">
+                Go to Anime room
+              </button>
+            </Link>
             <Anime />
-          </button>
-          <button className="btn btn-primary px-5" type="submit">
+          </div>
+          <div className="btn btn-primary px-5 rcorners">
+            <Link to="/chats">
+              <button className="btn btn-primary px-5" type="submit">
+                Go to chat room
+              </button>
+            </Link>
             <Chat />
-          </button>
-          <button className="btn btn-primary px-5" type="submit">
+          </div>
+          <div className="btn btn-primary px-5 rcorners">
+            <Link to="/movies">
+              <button className="btn btn-primary px-5" type="submit">
+                Go to Movies room
+              </button>
+            </Link>
             <Movies />
-          </button>
+          </div>
         </section>
         <Footer></Footer>
       </div>

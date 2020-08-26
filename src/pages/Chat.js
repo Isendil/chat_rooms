@@ -97,8 +97,15 @@ export default class Chat extends Component {
               >
                 {chat.content}
                 <br />
-                <span className="chat-time float-right">
+                {/* <span className="chat-time float-right">
                   {this.formatTime(chat.timestamp)}
+                </span> */}
+                <span className="chat-time ">
+                  {this.formatTime(chat.timestamp) +
+                    " " +
+                    (this.state.user.uid === chat.uid
+                      ? this.state.user.email
+                      : "")}
                 </span>
               </p>
             );

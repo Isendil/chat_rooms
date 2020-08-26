@@ -9,6 +9,9 @@ function Header() {
         <Link className="navbar-brand" to="/">
           Chatty
         </Link>
+        <Link className="navbar-brand" to="/rooms">
+          Main Chat Rooms
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

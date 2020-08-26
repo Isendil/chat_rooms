@@ -11,6 +11,8 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { auth } from "./services/firebase";
 import Rooms from "./pages/Rooms";
+import Anime from "./pages/Anime";
+import Movies from "./pages/Movies";
 import "./styles.css";
 
 function PrivateRoute({ component: Component, authenticated, ...rest }) {
@@ -83,6 +85,21 @@ class App extends Component {
             path="/rooms"
             authenticated={this.state.authenticated}
             component={Rooms}
+          />
+          <PrivateRoute
+            path="/chats"
+            authenticated={this.state.authenticated}
+            component={Chat}
+          />
+          <PrivateRoute
+            path="/anime"
+            authenticated={this.state.authenticated}
+            component={Anime}
+          />
+          <PrivateRoute
+            path="/movies"
+            authenticated={this.state.authenticated}
+            component={Movies}
           />
           <PublicRoute
             path="/signup"
