@@ -71,6 +71,12 @@ export default class Chat extends Component {
     return time;
   }
 
+  handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      this.handleSubmit(event);
+    }
+  };
+
   render() {
     return (
       <div>
@@ -117,6 +123,7 @@ export default class Chat extends Component {
             name="content"
             onChange={this.handleChange}
             value={this.state.content}
+            onKeyPress={this.handleKeyPress}
           ></textarea>
           {this.state.error ? (
             <p className="text-danger">{this.state.error}</p>
