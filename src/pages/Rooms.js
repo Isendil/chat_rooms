@@ -21,29 +21,35 @@ export default class HomePage extends Component {
               <div className="mt-4"></div>
             </div>
           </div>
-          <div className="btn btn-primary px-5 rcorners">
-            <Link to="/anime">
-              <button className="btn btn-primary px-5" type="submit">
-                Go to Anime room
-              </button>
-            </Link>
-            <Anime />
-          </div>
-          <div className="btn btn-primary px-5 rcorners">
-            <Link to="/chats">
-              <button className="btn btn-primary px-5" type="submit">
-                Go to chat room
-              </button>
-            </Link>
-            <Chat />
-          </div>
-          <div className="btn btn-primary px-5 rcorners">
-            <Link to="/movies">
-              <button className="btn btn-primary px-5" type="submit">
-                Go to Movies room
-              </button>
-            </Link>
-            <Movies />
+
+          <div className="container">
+            <div className="row">
+              <div className="col-sm rcorners">
+                <Link to="/movies">
+                  <button className="btn btn-primary px-5" type="submit">
+                    Go to Movies room
+                  </button>
+                </Link>
+                <Movies />
+              </div>
+              <div className="col-sm rcorners">
+                <Link to="/chats">
+                  <button className="btn btn-primary px-5" type="submit">
+                    Go to chat room
+                  </button>
+                </Link>
+                <Chat />
+              </div>
+              <div className="col-sm rcorners" id="anime">
+                {" "}
+                <Link to="/anime">
+                  <button className="btn btn-primary px-5" type="submit">
+                    Go to Anime room
+                  </button>
+                </Link>
+                <Anime />
+              </div>
+            </div>
           </div>
         </section>
         <Footer></Footer>

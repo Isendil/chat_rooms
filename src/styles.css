@@ -64,8 +64,25 @@ body {
 
 .rcorners {
   border-radius: 25px;
-  background: #73ad21;
+
   padding: 20px;
   width: 400px;
   height: 750px;
+}
+
+#anime {
+  background-image: url("./loli.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+#animeb {
+  background-image: url("./animeb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
 }
