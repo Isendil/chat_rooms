@@ -24,7 +24,7 @@ export default class HomePage extends Component {
 
           <div className="container">
             <div className="row">
-              <div className="col-sm rcorners">
+              <div className="col-sm rcorners" id="moviesb">
                 <Link to="/movies">
                   <button className="btn btn-primary px-5" type="submit">
                     Go to Movies room
@@ -32,7 +32,7 @@ export default class HomePage extends Component {
                 </Link>
                 <Movies />
               </div>
-              <div className="col-sm rcorners">
+              <div className="col-sm rcorners" id="wolfsb">
                 <Link to="/chats">
                   <button className="btn btn-primary px-5" type="submit">
                     Go to chat room
@@ -40,7 +40,7 @@ export default class HomePage extends Component {
                 </Link>
                 <Chat />
               </div>
-              <div className="col-sm rcorners" id="anime">
+              <div className="col-sm rcorners" id="animeb">
                 {" "}
                 <Link to="/anime">
                   <button className="btn btn-primary px-5" type="submit">
